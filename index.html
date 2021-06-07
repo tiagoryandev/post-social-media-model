@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="./styles/post.css">
+    <title>Criando um Modelo de Postagem</title>
+</head>
+<body>
+    <div class="box">
+        <div class="post">
+            <div class="header">
+                <div class="user">
+                    <div class="profile"></div>
+                    <span>tiagoinsany</span>
+                </div>
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+            <div class="main">
+                <img src="./assets/image.jpg">
+            </div>
+            <div class="footer">
+                <ul>
+                    <li><i class="far fa-heart" id="like"></i></li>
+                    <li><i class="far fa-comment" id="add-comment"></i></li>
+                    <li><i class="far fa-paper-plane" id="send-dm"></i></li>
+                </ul>
+
+                <div class="line"></div>
+
+                <div class="comments" id="comments">
+                    <div class="user">
+                        <span>amor_da_minha_vida</span> Gostei muito dessa foto, acho que vou usar como foto de perfil!
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="message">
+                    <input type="text" placeholder="Escreva o seu comentário" id="box-comment" disabled>
+                    <button id="submit" disabled>Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/addComment.js"></script>
+    <script src="./scripts/buttonsImage.js"></script>
+</body>
+</html>

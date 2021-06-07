@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background-color:#FFA500;
+}
+
+.box {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .post {
+        width: 100%;
+        max-width: 500px;
+        background-color: #ffffff;
+        
+        border-radius: 5px;
+
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 10px 15px;
+
+            .user {
+                display: flex;
+                align-items: center;
+                
+                .profile {
+                    width: 40px;
+                    height: 40px;
+                    background-image: url(../assets/user.png);
+                    background-size: cover;
+                    border-radius: 50%;
+                    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        z-index: 200;
+                        
+                        margin-top: 25px;
+                        margin-left: 25px;
+
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        border: 3px solid #ffffff;
+                        background-color: rgb(28, 160, 50);
+                    }
+                }
+
+                span {
+                    user-select: none;
+                    cursor: pointer;
+
+                    margin-left: 15px;
+
+                    color: #161616;
+                    font-weight: bold;
+                    text-transform: lowercase;
+                }
+            }
+
+            .fa {
+                user-select: none;
+                cursor: pointer;
+                font-weight: normal;
+            }
+        }
+
+        .main {
+            background-size: cover;
+            width: 100%;
+
+            img {
+                width: 100%;
+                user-select: none;
+            }
+        }
+
+        .footer {
+            width: 100%;
+
+            ul {
+                display: flex;
+                list-style: none;
+                margin: 10px 15px;
+                justify-content: space-around;
+
+                li {
+                    user-select: none;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    font-size: 20px;
+
+                    .fa {
+                        color: rgb(28, 160, 50);
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: transform 0.3s;
+                    }
+                }
+            }
+
+            .line {
+                width: 100%;
+                height: 1px;
+                background-color: #d4d4d4;
+            }
+
+            .comments {
+                padding: 10px 15px;
+
+                .user {
+                    color: #1a1a1a;
+                    font-size: 14px;
+                    margin: 10px 0px;
+
+                    span {
+                        color: #1a1a1a;
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .message {
+                padding: 15px 15px 15px 15px;
+                display: flex;
+                justify-content: space-between;
+
+                input {
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    color: gray;
+                    padding: 5px;
+                }
+
+                button {
+                    padding: 10px 15px;
+                    cursor: pointer;
+                    user-select: none;
+                    outline: none;
+                    border: none;
+                    
+                    background-color: rgb(28, 160, 50);
+                    border-radius: 3px;
+                    font-weight: bold;
+                    color: #ffffff;
+
+                    &:disabled {
+                        background-color: rgb(66, 189, 86);
+                    }
+
+                    &:active {
+                        background-color: rgb(23, 146, 44);
+                    }
+                }
+            }
+        }
+    }
+}

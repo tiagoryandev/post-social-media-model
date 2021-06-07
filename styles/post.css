@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background-color: #FFA500;
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box .post {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.box .post .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px;
+}
+
+.box .post .header .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box .post .header .user .profile {
+  width: 40px;
+  height: 40px;
+  background-image: url(../assets/user.png);
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.box .post .header .user .profile::after {
+  content: "";
+  position: absolute;
+  z-index: 200;
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  background-color: #1ca032;
+}
+
+.box .post .header .user span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin-left: 15px;
+  color: #161616;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+.box .post .header .fa {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.box .post .main {
+  background-size: cover;
+  width: 100%;
+}
+
+.box .post .main img {
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.box .post .footer {
+  width: 100%;
+}
+
+.box .post .footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 10px 15px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.box .post .footer ul li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 20px;
+}
+
+.box .post .footer ul li .fa {
+  color: #1ca032;
+}
+
+.box .post .footer ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.box .post .footer .line {
+  width: 100%;
+  height: 1px;
+  background-color: #d4d4d4;
+}
+
+.box .post .footer .comments {
+  padding: 10px 15px;
+}
+
+.box .post .footer .comments .user {
+  color: #1a1a1a;
+  font-size: 14px;
+  margin: 10px 0px;
+}
+
+.box .post .footer .comments .user span {
+  color: #1a1a1a;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.box .post .footer .message {
+  padding: 15px 15px 15px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.box .post .footer .message input {
+  width: 100%;
+  outline: none;
+  border: none;
+  color: gray;
+  padding: 5px;
+}
+
+.box .post .footer .message button {
+  padding: 10px 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
+  border: none;
+  background-color: #1ca032;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.box .post .footer .message button:disabled {
+  background-color: #42bd56;
+}
+
+.box .post .footer .message button:active {
+  background-color: #17922c;
+}
